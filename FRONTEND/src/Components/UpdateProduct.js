@@ -17,7 +17,7 @@ const UpdateProduct=()=>{
 
     const getProductDetails = async()=>{
         console.warn(params);
-        let result = await fetch(`http://localhost:5000/product/${params.id}`);
+        let result = await fetch(`https://m-edash.onrender.com/product/${params.id}`);
         result= await result.json();
        setName(result.name);
        setPrice(result.price);
@@ -34,7 +34,7 @@ const UpdateProduct=()=>{
       
         // console.warn(name, price,category, company);
         // const userId = JSON.parse( localStorage.getItem('user'))._id;
-        let result = await fetch(`http://localhost:5000/product/${params.id}` ,{
+        let result = await fetch(`https://m-edash.onrender.com/product/${params.id}` ,{
             method: 'put',
             body:JSON.stringify( {name, price,category, company }),
             headers:{
